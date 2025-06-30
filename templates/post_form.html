@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ 'Edit' if post else 'New' }} Post</h2>
+<form method="POST">
+    <label>Title:</label><br>
+    <input type="text" name="title" id="title" value="{{ post.title if post else '' }}"><br>
+
+    <label>Body:</label><br>
+    <textarea name="body">{{ post.body if post else '' }}</textarea><br>
+
+    <label>
+        <input type="checkbox" name="is_published" {% if post and post.is_published %}checked{% endif %}>
+        Publish Now
+    </label><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<!-- JS character counter -->
+<p id="charCount">0</p>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
