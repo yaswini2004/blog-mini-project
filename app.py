@@ -15,3 +15,4 @@ def create_app():
     app.register_blueprint(post_bp)
 
     return app
+#app.py in which running all the file using flask
