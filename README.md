@@ -18,8 +18,6 @@ This project is a basic blogging platform built using the Flask web framework. I
   - [Running the Application](#running-the-application)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -46,7 +44,83 @@ This Flask Blogging App allows users to create an account, log in, and write blo
 
 ### Prerequisites
 
-Ensure you have Python 3.7+ installed. Install required packages via `pip`:
+Ensure you have Python 3.7+ installed.
 
+## Running the Application
+
+### 1. Clone the repository
+
+ https://github.com/yaswini2004/blog-mini-project
+ ### 2. Navigate to the project directory
+ ```bash
+ cd blog-mini-project
+```
+  ### 3. Create and activate a virtual environment
 ```bash
-pip install -r requirements.txt
+  python -m venv venv
+source venv/bin/activate        # On macOS/Linux
+venv\Scripts\activate           # On Windows
+```
+  ### 4. Install dependencies
+  ```bash
+  pip install -r requirements.txt
+```
+  ### 5. Set environment variables (for development mode)
+  ```bash
+  set FLASK_APP=run.py            # On Windows
+export FLASK_APP=run.py         # On macOS/Linux
+```
+### 6. Initialize the database (if using Flask-Migrate)
+```bash
+flask db init
+flask db migrate -m "Initial migration"
+flask db upgrade
+```
+### 7. Run the development server
+```bash
+flask run
+```
+### 8. Run the development server
+```bash
+http://127.0.0.1:5000/
+```
+## Usage
+- Register a new user.
+- Log in using your credentials.
+- Start creating blog posts.
+- Log out or delete posts as needed.
+## Contributing
+Contributions are welcome! Please feel free to fork the repo and submit a pull request.
+### 1. Fork the repository.
+### 2. Create a feature branch
+```bash
+git checkout -b feature/YourFeature
+```
+### 3. Commit your changes
+```bash
+git commit -m "Add Your Feature"
+```
+### 4. Push to the branch
+```bash
+git push origin feature/YourFeature
+```
+### 5. Open a pull request.
+
+
+
+
+ 
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
